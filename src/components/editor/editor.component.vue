@@ -2,7 +2,7 @@
     <div class="row editor" >
                 <div class="col-12">
                     <div class="d-flex tools-section justify-content-end">
-                        <button class="btn btn-link ms-2" onclick="toggleslide()" >minimize</button>
+                        <button class="btn btn-link ms-2" @click="toggleEditor()" >minimize</button>
                         <span class="mr-2"> | </span>
                         <button class="btn btn-link ms-2" @click="render()" >Run</button>
                     </div>

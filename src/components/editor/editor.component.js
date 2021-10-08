@@ -5,6 +5,11 @@ import constants from '@/store/const'
 
 export default  {
     name: 'editorComponent',
+    data() {
+        return {
+            isHidden:false
+        }
+    },
     computed: {
         ...mapGetters({
             templates:constants.pageConstants.GET_TEMPLATES,
@@ -42,7 +47,20 @@ export default  {
         },
         editTemplate(){
             this.$store.dispatch(constants.pageConstants.STORE_TEMPLATE,this.current_template);
-
+        },
+        toggleEditor(){
+           
+            const editor = document.getElementById("editor");
+            const preview = document.getElementById("preview");
+            console.log('editor toggle',editor);
+            editor.classList.toggle('hide');
+            if(!this.isHidden){
+                preview.style.height="96vh";
+            }
+            else{
+                preview.style.height="calc(100% - 300px)"
+            }
+            this.isHidden = !this.isHidden;
         }
         
     },

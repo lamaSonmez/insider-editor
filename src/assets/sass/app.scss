@@ -5,13 +5,22 @@
 .preview-section{
     margin-top:10px;
     margin-bottom:10px;
+    height: 100%;
     box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-
     p{
         text-align: left;
     }
 }
 
+.preview-container{
+    height:calc(100% - 300px);
+    min-height: calc(100% - 300px);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
 
 .split {
     display: flex;
@@ -24,17 +33,13 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    overflow: auto;
-    min-height: 400px;
-
-
 }
+
 
 .split-section textarea{
     width:100%;
     min-height: 400px;
     height:100%;
-
 
 }
 
@@ -51,10 +56,41 @@
 
 .iframe{
     width:100%;
-    min-height: 300px;
+    min-height: calc(100% - 300px);
+    height:calc(100% - 300px);
     margin-top:10px;
 }
 
 .hide{
-    height:20px;
+    height:0px;
+    min-height: 0px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.hide .split-section textarea{
+    height:0px;
+    min-height: 0px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+.hide .split{
+    height:0px;
+    min-height: 0px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+.editor{
+    height:auto;
+    display: flex;
+    flex-direction: column;
 }
