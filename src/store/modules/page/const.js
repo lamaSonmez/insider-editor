@@ -9,6 +9,6 @@ export default {
         FETCH_TEMPLATES : "fetchTemplates",
         FETCH_TEMPLATE:"fetchTemplate",
         STORE_TEMPLATE:"storeTemplate",
-        UPDATE_TEMPLATE:"updateTemplate"
+        NEW_TEMPLATE:"newTemplate"
 }
     

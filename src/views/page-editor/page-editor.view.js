@@ -33,9 +33,20 @@ export default {
         window.jQuery('#EditorForm').modal('show');
       },
       onTemplateChange(event){
-          console.log('change event',event);
-          this.fetchTemplate(event.target.value);
-      }
+          if(event.target.value==null){
+            this.$store.dispatch(constants.pageConstants.NEW_TEMPLATE,{
+                id:0,
+                name:'',
+                html:'',
+                css:'',
+                js:''
+              });
+          }
+         else{
+            this.fetchTemplate(event.target.value);
+
+         }
+          }
     },
     mounted(){
         this.getTemplates();

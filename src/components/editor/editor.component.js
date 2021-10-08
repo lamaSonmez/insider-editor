@@ -49,10 +49,8 @@ export default  {
             this.$store.dispatch(constants.pageConstants.STORE_TEMPLATE,this.current_template);
         },
         toggleEditor(){
-           
             const editor = document.getElementById("editor");
             const preview = document.getElementById("preview");
-            console.log('editor toggle',editor);
             editor.classList.toggle('hide');
             if(!this.isHidden){
                 preview.style.height="96vh";

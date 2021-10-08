@@ -5,8 +5,8 @@
     <div class="col-12">
       <div class="d-flex justify-content-end w-100">
         <div class="select-container ms-3">
-          <select class="form-select form-select" id="templatesHistory" @change="onTemplateChange($event)">
-            <option value="null"></option>
+          <select class="form-select form-select" id="templatesHistory" v-model="current_template.id" @change="onTemplateChange($event)">
+            <option :value="null"></option>
             <option :value="item.id" v-for="item in templates " :key="item.id">{{ item.name }}</option>
           </select>
         </div>

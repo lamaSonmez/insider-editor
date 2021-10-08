@@ -36,22 +36,18 @@ const actions = {
         return new Promise((resolve, reject) => {
             ApiService.get("templates")
                 .then(({data}) => {
-                    console.log('data is ',data);
                     context.commit(constants.SET_TEMPLATES,data);
                     resolve(data);
                 })
                 .catch(({response}) => {
-                    console.log(response);
                     reject(response);
                 });
         });
     },
     [constants.FETCH_TEMPLATE](context,id) {
         return new Promise((resolve, reject) => {
-            console.log('fetch template iwth ',id);
             ApiService.get(`templates/${id}`)
                 .then(({data}) => {
-                    console.log('data is after fetch template,',data);
                     context.commit(constants.SET_CURRENT_TEMPLATE,data);
                     resolve(data);
                 })
@@ -63,9 +59,9 @@ const actions = {
     },
     [constants.STORE_TEMPLATE](context,template) {
         return new Promise((resolve, reject) => {
-            if(template.id==0){
+            if(template.id==undefined){
                 template.id = Math.random() + 100;
-                ApiService.post(`templates`,template)
+                ApiService.post(`templates/`,template)
                 .then(({data}) => {
                     context.commit(constants.SET_CURRENT_TEMPLATE,template);
                     resolve(data);
@@ -89,9 +85,8 @@ const actions = {
             
         });
     },
-    [constants.UPDATE_TEMPLATE](context,template) {
-        console.log('template to update',template);
-        //context.commit(constants.SET_CURRENT_TEMPLATE,{template});
+    [constants.NEW_TEMPLATE](context,template) {
+        context.commit(constants.SET_CURRENT_TEMPLATE,template);
     },
 };
 

@@ -7,5 +7,6 @@
       "css": ".red{color:red;}",
       "js": "console.log(document.querySelector('.red'));"
     }
+   
   ]
 }
