@@ -44,7 +44,20 @@ const actions = {
         return new Promise((resolve, reject) => {
             ApiService.get(`templates/${id}`)
                 .then(({data}) => {
-                    context.commit(constants.SET_CURRENT_TEMPLATE,{value:data});
+                    context.commit(constants.SET_CURRENT_TEMPLATE,{data});
+                    resolve(data);
+                })
+                .catch(({response}) => {
+                    console.log(response);
+                    reject(response);
+                });
+        });
+    },
+    [constants.STORE_TEMPLATE](context,id) {
+        return new Promise((resolve, reject) => {
+            ApiService.post(`templates/${id}`)
+                .then(({data}) => {
+                    context.commit(constants.SET_CURRENT_TEMPLATE,{data});
                     resolve(data);
                 })
                 .catch(({response}) => {

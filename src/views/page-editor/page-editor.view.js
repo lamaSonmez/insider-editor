@@ -13,7 +13,7 @@ export default {
     },
     components:{
         editorComponent,
-        previewComponent
+        previewComponent,
     },
 
     computed: {

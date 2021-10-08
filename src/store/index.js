@@ -20,7 +20,7 @@ export default createStore({
     modules,
     plugins: [
         createPersistedState({
-            paths: ['auth'],
+            paths: ['page'],
         }),
     ]
 });
