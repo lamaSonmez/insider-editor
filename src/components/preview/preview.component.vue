@@ -1,7 +1,12 @@
 <template>
-<div>
-    <h3>preview</h3>
-</div>
+ <div class="w-100">
+                <div class="col-12 text-left" v-if="current_template">
+                    <p style="text-align:left"> {{current_template.name}}</p>
+                    <div class="preview-section" id="previewContent">
+                        <iframe id="iFrame" width="100%" class="iframe"></iframe>
+                    </div>
+                </div>
+            </div>
 </template>
-Q
+
 <script src="./preview.component.js"></script>

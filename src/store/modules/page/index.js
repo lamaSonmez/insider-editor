@@ -3,7 +3,13 @@ import ApiService from "@/api/api.service";
 import constants from  './const';
 
 const state = {
-   current_template:null,
+   current_template:{
+       id:0,
+       name:'',
+       html:'',
+       css:'',
+       js:''
+   },
    templates:[]
 };
 
