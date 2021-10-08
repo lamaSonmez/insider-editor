@@ -9,5 +9,12 @@ export default {
             current_template: constants.pageConstants.GET_CURRENT_TEMPLATE,
         })
     },
+    methods:{
+        saveTemplate(){
+            this.$store.dispatch(constants.pageConstants.STORE_TEMPLATE,this.current_template);
+            window.jQuery('#EditorForm').modal('hide');
+
+        }
+    }
     
 }

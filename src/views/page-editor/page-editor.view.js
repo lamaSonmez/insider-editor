@@ -4,7 +4,6 @@ import editorFormComponent from "@/components/editor-form/editor-form.component.
 import { mapGetters, mapActions } from 'vuex'
 import constants from '@/store/const'
 
-
 export default {
     name:'PageEditor',
     data() {
@@ -31,7 +30,7 @@ export default {
           fetchTemplate:constants.pageConstants.FETCH_TEMPLATE
       }),
       openSaveModal(){
-        window.$('#EditorForm').modal('show');
+        window.jQuery('#EditorForm').modal('show');
       },
       onTemplateChange(event){
           console.log('change event',event);

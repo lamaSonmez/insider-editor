@@ -2,10 +2,10 @@
   "templates": [
     {
       "id": 1,
-      "name": "temp 1",
+      "name": "temp dfs",
       "html": "<h3 class='red'>Hello This is Template 1</h3>\n<hr/>\n<p>lorem ipsum is a dummy text generateor ....</p>\n\n<h3>Section 2</h3>",
       "css": ".red{color:red;}",
-      "js": ""
+      "js": "console.log(document.querySelector('.red'));"
     }
   ]
 }

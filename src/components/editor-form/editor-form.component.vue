@@ -1,5 +1,5 @@
 <template>
-<div class="modal"  id="EditorForm" v-if="template">
+<div class="modal"  id="EditorForm" v-if="current_template">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -20,7 +20,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" @click="saveTemplate()">Save changes</button>
       </div>
     </div>
   </div>
