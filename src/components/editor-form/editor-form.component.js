@@ -9,4 +9,5 @@ export default {
             current_template: constants.pageConstants.GET_CURRENT_TEMPLATE,
         })
     },
+    
 }

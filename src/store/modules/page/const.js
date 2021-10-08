@@ -8,6 +8,7 @@ export default {
     /** Actions */
         FETCH_TEMPLATES : "fetchTemplates",
         FETCH_TEMPLATE:"fetchTemplate",
-        STORE_TEMPLATE:"storeTemplate"
+        STORE_TEMPLATE:"storeTemplate",
+        UPDATE_TEMPLATE:"updateTemplate"
 }
     

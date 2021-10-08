@@ -12,7 +12,7 @@
                     <div class="col-12">
                        <div class="mb-3">
                             <label for="template" class="form-label">Template Name</label>
-                            <input type="text" class="form-control" id="template" placeholder="enter name" v-model="template.name" >
+                            <input type="text" class="form-control" id="template" placeholder="enter name" v-model="current_template.name" >
                         </div>
                     </div>
                 </div>

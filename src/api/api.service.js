@@ -16,6 +16,9 @@ const ApiService = {
     post(resource, params) {
         return axios.post(`${resource}`, params);
     },
+    put(resource, params) {
+        return axios.put(`${resource}`, params);
+    },
 };
 
 export default ApiService;

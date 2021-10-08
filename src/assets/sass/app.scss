@@ -1,6 +1,6 @@
 @import "_variables.scss";
 @import "~bootstrap/dist/css/bootstrap.css";
-
+@import "~highlight.js/styles/atom-one-dark.css";
 
 .preview-section{
     margin-top:10px;
@@ -10,4 +10,51 @@
     p{
         text-align: left;
     }
+}
+
+
+.split {
+    display: flex;
+    flex-direction: row;
+    border:1px solid #333;
+    min-height: 400px;
+}
+
+.split-section{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow: auto;
+    min-height: 400px;
+
+
+}
+
+.split-section textarea{
+    width:100%;
+    min-height: 400px;
+    height:100%;
+
+
+}
+
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
+}
+
+.iframe{
+    width:100%;
+    min-height: 300px;
+    margin-top:10px;
+}
+
+.hide{
+    height:20px;
 }

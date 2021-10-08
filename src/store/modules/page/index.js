@@ -63,17 +63,35 @@ const actions = {
     },
     [constants.STORE_TEMPLATE](context,template) {
         return new Promise((resolve, reject) => {
-            template.id = Math.random() + 100;
-            ApiService.post(`templates`,template)
+            if(template.id==0){
+                template.id = Math.random() + 100;
+                ApiService.post(`templates`,template)
                 .then(({data}) => {
-                    context.commit(constants.SET_CURRENT_TEMPLATE,{data});
+                    context.commit(constants.SET_CURRENT_TEMPLATE,template);
                     resolve(data);
                 })
                 .catch(({response}) => {
                     console.log(response);
                     reject(response);
                 });
+            }
+            else{
+                ApiService.put(`templates/${template.id}`,template)
+                .then(({data}) => {
+                    context.commit(constants.SET_CURRENT_TEMPLATE,template);
+                    resolve(data);
+                })
+                .catch(({response}) => {
+                    console.log(response);
+                    reject(response);
+                });
+            }
+            
         });
+    },
+    [constants.UPDATE_TEMPLATE](context,template) {
+        console.log('template to update',template);
+        //context.commit(constants.SET_CURRENT_TEMPLATE,{template});
     },
 };
 
