@@ -28,7 +28,6 @@ const mutations = {
 const actions = {
     [constants.FETCH_TEMPLATES](context) {
         return new Promise((resolve, reject) => {
-            ApiService.setHeader();
             ApiService.get("templates")
                 .then(({data}) => {
                     context.commit(constants.SET_TEMPLATES,{value:data});
@@ -42,7 +41,6 @@ const actions = {
     },
     [constants.FETCH_TEMPLATE](context,id) {
         return new Promise((resolve, reject) => {
-            ApiService.setHeader();
             ApiService.get(`templates/${id}`)
                 .then(({data}) => {
                     context.commit(constants.SET_CURRENT_TEMPLATE,{value:data});

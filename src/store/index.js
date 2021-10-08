@@ -1,11 +1,12 @@
 import {createStore} from 'vuex';
 
 import createPersistedState from 'vuex-persistedstate';
+import page from './modules/page';
 
 import _ from 'lodash';
 
 const modules = {
-   
+    page 
 };
 
 export default createStore({
