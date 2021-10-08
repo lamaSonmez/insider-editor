@@ -4,7 +4,7 @@ export default {
         SET_CURRENT_TEMPLATE:"setCurrentTemplate",
     /** Getters */
         GET_TEMPLATES : "getTemplates",
-        GET__CURRENT_TEMPLATE : "getCurrentTemplate",
+        GET_CURRENT_TEMPLATE : "getCurrentTemplate",
     /** Actions */
         FETCH_TEMPLATES : "fetchTemplates",
         FETCH_TEMPLATE:"fetchTemplate"

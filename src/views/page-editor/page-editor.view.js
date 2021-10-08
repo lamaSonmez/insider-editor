@@ -19,7 +19,7 @@ export default {
     computed: {
         ...mapGetters({
             templates:constants.pageConstants.GET_TEMPLATES,
-            current_template: constants.pageConstants.GET__CURRENT_TEMPLATE,
+            current_template: constants.pageConstants.GET_CURRENT_TEMPLATE,
         })
        
     },

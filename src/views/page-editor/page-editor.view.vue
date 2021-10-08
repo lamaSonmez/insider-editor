@@ -4,9 +4,7 @@
       <div class="d-flex justify-content-end w-100">
         <div class="select-container mr-3">
           <select class="form-control" id="templatesHistory">
-            <option value="1">Template 1</option>
-            <option value="2">Template 2</option>
-            <option value="3">Template 3</option>
+            <option :value="item.id" v-for="item in templates " :key="item.id">{{ item.name }}</option>
           </select>
         </div>
         <button class="btn btn-success" data-toggle="modal" data-target="#saveTemplate">Save</button>

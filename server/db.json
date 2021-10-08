@@ -1,3 +1,11 @@
 {
-    "templates":[]
+    "templates":[
+        {
+            "id":1,
+            "name":"temp 1",
+            "html":"<h3 class='red'>Hello This is Template 1",
+            "css":".red{color:red;}"
+        }
+
+    ]
 }

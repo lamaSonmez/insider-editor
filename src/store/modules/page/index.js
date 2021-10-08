@@ -11,7 +11,7 @@ const getters = {
     [constants.GET_TEMPLATES] : state => {
         return state.templates;
     },
-    [constants.GET__CURRENT_TEMPLATE] : state => {
+    [constants.GET_CURRENT_TEMPLATE] : state => {
         return state.current_template;
     },
 };
@@ -21,7 +21,7 @@ const mutations = {
         state.current_template = data.current_template;
     },
     [constants.SET_TEMPLATES] (state,data) {
-        state.templates = data.templates;
+        state.templates = data;
     },
 };
 
@@ -30,7 +30,8 @@ const actions = {
         return new Promise((resolve, reject) => {
             ApiService.get("templates")
                 .then(({data}) => {
-                    context.commit(constants.SET_TEMPLATES,{value:data});
+                    console.log('data is ',data);
+                    context.commit(constants.SET_TEMPLATES,data);
                     resolve(data);
                 })
                 .catch(({response}) => {
