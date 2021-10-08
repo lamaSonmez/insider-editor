@@ -1,6 +1,7 @@
 <template>
 <div class="container-fluid" >
-    <h3>Hello There </h3>
+    <previewComponent></previewComponent>
+   <editorComponent></editorComponent>
 </div>
 </template>
 

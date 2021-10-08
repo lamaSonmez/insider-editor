@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import pageEditorView from '../views/page-editor/page-editor.view'
+import PageEditor from '@/views/page-editor/page-editor.view.vue'
 
 
 
@@ -13,7 +13,7 @@ const router = createRouter({
         {
             path:'/',
             name:'PageEditor',
-            component:pageEditorView
+            component:PageEditor
         }
     ],
     scrollBehavior() {
