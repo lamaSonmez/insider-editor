@@ -18,7 +18,7 @@ const getters = {
 
 const mutations = {
     [constants.SET_CURRENT_TEMPLATE] (state,data) {
-        state.current_template = data.current_template;
+        state.current_template = data;
     },
     [constants.SET_TEMPLATES] (state,data) {
         state.templates = data;
@@ -42,9 +42,11 @@ const actions = {
     },
     [constants.FETCH_TEMPLATE](context,id) {
         return new Promise((resolve, reject) => {
+            console.log('fetch template iwth ',id);
             ApiService.get(`templates/${id}`)
                 .then(({data}) => {
-                    context.commit(constants.SET_CURRENT_TEMPLATE,{data});
+                    console.log('data is after fetch template,',data);
+                    context.commit(constants.SET_CURRENT_TEMPLATE,data);
                     resolve(data);
                 })
                 .catch(({response}) => {
@@ -53,9 +55,10 @@ const actions = {
                 });
         });
     },
-    [constants.STORE_TEMPLATE](context,id) {
+    [constants.STORE_TEMPLATE](context,template) {
         return new Promise((resolve, reject) => {
-            ApiService.post(`templates/${id}`)
+            template.id = Math.random() + 100;
+            ApiService.post(`templates`,template)
                 .then(({data}) => {
                     context.commit(constants.SET_CURRENT_TEMPLATE,{data});
                     resolve(data);

@@ -1,6 +1,5 @@
 <template>
   <router-view v-slot="{ Component }">
-    <editorFormComponent></editorFormComponent>
     <transition name="fade" mode="out-in">
       <component :is="Component" />
     </transition>
@@ -8,11 +7,10 @@
 </template>
 
 <script>
-import editorFormComponent from "@/components/editor-form/editor-form.component.vue"
+import "bootstrap"
 export default {
   name: 'App',
   components: {
-    editorFormComponent
   }
 }
 </script>
